@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F26 – Scoring de crédit : vidéo de présentation</title>
+<style>
+:root{--bg:#eef3fb;--ink:#0b1b3a;--muted:#5b6b8a;--blue:#1f5eff;--navy:#07122b;--sky:#9db8f5;--grey:#9aa7bd;--white:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050b1a;--ink:#e8eefc;--muted:#93a3c4}}
+:root[data-theme="dark"]{--bg:#050b1a;--ink:#e8eefc;--muted:#93a3c4}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Sora","Segoe UI",system-ui,-apple-system,sans-serif;min-height:100%;display:flex;flex-direction:column;align-items:center;padding:16px}
+.wrap{width:100%;max-width:960px}
+.stage{position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:var(--navy);container-type:inline-size}
+.scene{position:absolute;inset:0;padding:6cqw 7cqw;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .8s ease;pointer-events:none}
+.scene.on{opacity:1}
+.dark{background:var(--navy);color:#fff}
+.light{background:#f7faff;color:#0b1b3a}
+h1{font-size:4.6cqw;line-height:1.15;margin:0 0 1.6cqw;font-weight:700;letter-spacing:-.02em}
+h2{font-size:3.4cqw;line-height:1.2;margin:0 0 2cqw;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.sub{font-size:2cqw;color:var(--sky)}
+.marks{display:flex;gap:3cqw;margin-bottom:4cqw;font-size:1.6cqw;color:var(--sky)}
+.marks span{border:1px solid rgba(157,184,245,.4);padding:.6cqw 1.4cqw;border-radius:4px}
+.reveal{opacity:0;transform:translateY(1.2cqw);transition:opacity .9s ease,transform .9s ease}
+.on .reveal{opacity:1;transform:none}
+.d1{transition-delay:.3s}.d2{transition-delay:1.4s}.d3{transition-delay:2.6s}.d4{transition-delay:4s}.d5{transition-delay:6s}
+.icons{display:flex;gap:3cqw;margin-bottom:3cqw}
+.ic{display:flex;align-items:center;gap:1cqw;font-size:1.8cqw;font-weight:600}
+.ic svg{width:4.4cqw;height:4.4cqw;stroke:#1f5eff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.split{display:flex;height:5cqw;border-radius:6px;overflow:hidden;width:100%;background:#dbe6fb}
+.split i{display:flex;align-items:center;padding-left:1.4cqw;font-style:normal;font-weight:700;font-size:1.9cqw;color:#fff;width:0;transition:width 2.2s ease .8s;white-space:nowrap}
+.on .split .a{width:68.7%;background:#1f5eff}.on .split .r{width:31.3%;background:#0b1b3a}
+.cap{font-size:1.7cqw;color:#5b6b8a;margin-top:1.4cqw}
+.big{font-size:9cqw;font-weight:800;color:#9db8f5;line-height:1;letter-spacing:-.04em}
+.flow{display:flex;align-items:center;gap:1.6cqw;margin:2.6cqw 0}
+.box{border:1.5px solid #1f5eff;border-radius:8px;padding:1.5cqw 2cqw;font-size:1.8cqw;font-weight:600;background:rgba(31,94,255,.12)}
+.arr{font-size:2.4cqw;color:#9db8f5}
+.formula{font-family:"Cambria Math","STIX Two Math",Georgia,serif;font-size:2.4cqw;color:#cfe0ff;font-style:italic}
+.row{display:flex;align-items:center;gap:1.6cqw;margin:1.1cqw 0;font-size:1.8cqw}
+.row b{width:11cqw;font-weight:600}
+.track{flex:1;display:flex;flex-direction:column;gap:.6cqw}
+.bar{height:3cqw;border-radius:4px;width:0;display:flex;align-items:center;justify-content:flex-end;padding-right:1cqw;font-weight:700;font-size:1.6cqw;color:#fff;transition:width 1.8s ease}
+.bar.n{background:#9aa7bd}.bar.m{background:#1f5eff}
+.on .bar{width:calc(var(--v)*100%)}
+.legend{display:flex;gap:2.4cqw;font-size:1.5cqw;color:#5b6b8a;margin-bottom:1cqw}
+.legend span:before{content:"";display:inline-block;width:1.4cqw;height:1.4cqw;border-radius:2px;margin-right:.6cqw;background:var(--c);vertical-align:-.1cqw}
+.callout{margin-top:2cqw;font-size:2cqw;border-left:4px solid #1f5eff;padding-left:1.6cqw}
+.callout code{font-family:ui-monospace,Menlo,Consolas,monospace;color:#1f5eff;font-weight:700}
+.pts{font-size:2cqw;line-height:1.7;color:#dbe6ff;margin:0 0 2.4cqw;padding:0;list-style:none}
+.gh{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.5cqw;color:#9db8f5;word-break:break-all}
+.merci{font-size:3cqw;font-weight:700;margin-bottom:1.6cqw}
+.sbt{position:absolute;left:5cqw;right:5cqw;bottom:2.4cqw;text-align:center;font-size:1.7cqw;line-height:1.4;color:#fff;z-index:3}
+.sbt span{background:rgba(5,11,26,.78);padding:.4cqw 1.2cqw;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.prog{position:absolute;left:0;bottom:0;height:.5cqw;background:#1f5eff;width:0;z-index:4}
+.start{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;background:rgba(5,11,26,.88);color:#fff;flex-direction:column;gap:2cqw;text-align:center;padding:4cqw}
+.start button{font:inherit;font-size:2cqw;padding:1.2cqw 3cqw;border:0;border-radius:8px;background:#1f5eff;color:#fff;cursor:pointer;font-weight:600}
+.start p{font-size:1.5cqw;color:#9db8f5;max-width:50cqw}
+.ctl{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.ctl button{font:inherit;padding:8px 16px;border-radius:8px;border:1px solid var(--muted);background:transparent;color:var(--ink);cursor:pointer}
+.ctl button:focus-visible,.start button:focus-visible{outline:3px solid #9db8f5;outline-offset:2px}
+.ctl label{display:flex;gap:6px;align-items:center}
+@media (prefers-reduced-motion:reduce){.reveal,.bar,.split i{transition-duration:.01s;transition-delay:0s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="stage" id="stage">
+
+<section class="scene dark" data-t="0">
+<div class="marks reveal d1"><span>Université Hassan 1er</span><span>ENCG Settat</span></div>
+<h1 class="reveal d2">F26 – Scoring de crédit :<br>prédiction d’octroi de prêt logement</h1>
+<p class="sub reveal d3">Régression logistique | Soha El Ghamri</p>
+</section>
+
+<section class="scene light" data-t="12">
+<h2 class="reveal d1">Une décision critique, une erreur coûteuse</h2>
+<div class="icons reveal d2">
+<div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/></svg>Banque</div>
+<div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></svg>Dossier</div>
+<div class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v16M5 20h14M5 8h14M5 8l-3 7h6zM19 8l-3 7h6z"/></svg>Risque / rentabilité</div>
+</div>
+<div class="split reveal d2"><i class="a">Accordé 69 %</i><i class="r">Refusé 31 %</i></div>
+<p class="cap reveal d3">Un modèle peut-il battre la règle naïve « toujours accepter » ?</p>
+</section>
+
+<section class="scene dark" data-t="28">
+<p class="big reveal d1">614</p>
+<p class="sub reveal d1">dossiers de prêt · historique de crédit, revenu, montant demandé</p>
+<div class="flow reveal d2"><div class="box">Nettoyage</div><span class="arr">›</span><div class="box">Encodage</div><span class="arr">›</span><div class="box">Régression logistique</div></div>
+<p class="formula reveal d3">P(y = 1 | x) = 1 / (1 + e<sup>−(β₀ + Σ βⱼxⱼ)</sup>)</p>
+<p class="sub reveal d4" style="margin-top:1.6cqw">Pipeline scikit-learn : aucune fuite de données</p>
+</section>
+
+<section class="scene light" data-t="48">
+<h2 class="reveal d1">Sur le jeu de test, le modèle bat la référence</h2>
+<div class="legend reveal d1"><span style="--c:#9aa7bd">Référence naïve</span><span style="--c:#1f5eff">Régression logistique</span></div>
+<div class="row"><b>Accuracy</b><div class="track"><div class="bar n" style="--v:.69">0,69</div><div class="bar m" style="--v:.82">0,82</div></div></div>
+<div class="row"><b>F1-score</b><div class="track"><div class="bar n" style="--v:.82">0,82</div><div class="bar m" style="--v:.87">0,87</div></div></div>
+<p class="callout reveal d4">Objectif F1 ≥ 0,78 atteint. Facteur dominant : <code>Credit_History</code></p>
+</section>
+
+<section class="scene dark" data-t="70">
+<h2 class="reveal d1">Un modèle simple, interprétable, bien évalué</h2>
+<ul class="pts reveal d2"><li>F1-score de 0,87 contre un objectif de 0,78</li><li>Historique de crédit : signal le plus discriminant</li><li>Protocole sans fuite, reproductible</li></ul>
+<p class="merci reveal d3">Merci de votre attention</p>
+<p class="gh reveal d4">github.com/soha409/23009286-Soha-El-Ghamri-G2-FIN</p>
+<p class="sub reveal d4" style="margin-top:1cqw">Soha El Ghamri – ENCG Settat</p>
+</section>
+
+<div class="sbt"><span id="sub"></span></div>
+<div class="prog" id="prog"></div>
+<div class="start" id="start">
+<button id="go">Lancer la vidéo (85 s)</button>
+<p>La narration utilise la voix française de votre navigateur. Activez le son.</p>
+</div>
+</div>
+
+<div class="ctl">
+<button id="pp">Pause</button><button id="rs">Recommencer</button>
+<label><input type="checkbox" id="vo" checked> Narration vocale</label>
+<span id="tm">0 / 85 s</span>
+</div>
+</div>
+
+<script>
+(function(){
+var DUR=85;
+var texts=[
+"Peut-on prédire de façon fiable l’octroi d’un prêt logement à partir des caractéristiques d’un demandeur ?",
+"L’octroi de crédit immobilier est une décision critique. Une erreur coûte cher. Un modèle d’apprentissage automatique peut-il battre une règle naïve qui accepte systématiquement la classe majoritaire ?",
+"Sur 614 dossiers, avec l’historique de crédit, le revenu et le montant demandé, j’ai entraîné une régression logistique. Tout le prétraitement est protégé contre les fuites de données grâce à un Pipeline scikit-learn.",
+"Résultat : le modèle atteint un F1-score de 0,87 sur le jeu de test, nettement au-dessus de l’objectif de 0,78, et bat clairement la référence naïve. L’historique de crédit est le facteur le plus discriminant.",
+"Un modèle simple, interprétable et correctement évalué apporte déjà une réelle valeur décisionnelle. Projet réalisé par Soha El Ghamri, ENCG Settat. Merci de votre attention."
+];
+var scenes=[].slice.call(document.querySelectorAll('.scene'));
+var starts=scenes.map(function(s){return +s.dataset.t});
+var sub=document.getElementById('sub'),prog=document.getElementById('prog'),tm=document.getElementById('tm');
+var t=0,playing=false,last=0,cur=-1,raf;
+var synth=window.speechSynthesis;
+function voice(){try{var v=synth.getVoices().filter(function(x){return /^fr/i.test(x.lang)});return v[0]||null}catch(e){return null}}
+function speak(i){
+ try{
+  synth&&synth.cancel();
+  if(!document.getElementById('vo').checked||!synth)return;
+  var u=new SpeechSynthesisUtterance(texts[i]);u.lang='fr-FR';u.rate=1.08;var v=voice();if(v)u.voice=v;synth.speak(u);
+ }catch(e){}
+}
+function setScene(i,say){
+ if(i===cur)return;
+ scenes.forEach(function(s,k){s.classList.toggle('on',k===i)});
+ cur=i;sub.textContent=texts[i];
+ if(say)speak(i);
+}
+function idx(x){var k=0;for(var i=0;i<starts.length;i++)if(x>=starts[i])k=i;return k}
+function tick(now){
+ if(!playing)return;
+ t+=(now-last)/1000;last=now;
+ if(t>=DUR){t=DUR;playing=false;document.getElementById('pp').textContent='Rejouer';prog.style.width='100%';tm.textContent=DUR+' / '+DUR+' s';return}
+ setScene(idx(t),true);
+ prog.style.width=(t/DUR*100)+'%';tm.textContent=Math.floor(t)+' / '+DUR+' s';
+ raf=requestAnimationFrame(tick);
+}
+function play(){playing=true;last=performance.now();document.getElementById('pp').textContent='Pause';
+ if(cur>=0&&t>0)try{synth&&synth.resume()}catch(e){}
+ raf=requestAnimationFrame(tick)}
+function pause(){playing=false;cancelAnimationFrame(raf);document.getElementById('pp').textContent='Reprendre';try{synth&&synth.pause()}catch(e){}}
+function restart(){cancelAnimationFrame(raf);try{synth&&synth.cancel()}catch(e){}
+ scenes.forEach(function(s){s.classList.remove('on')});cur=-1;t=0;
+ setTimeout(function(){play()},60)}
+document.getElementById('go').onclick=function(){document.getElementById('start').style.display='none';restart()};
+document.getElementById('pp').onclick=function(){if(t>=DUR)restart();else if(playing)pause();else play()};
+document.getElementById('rs').onclick=restart;
+document.getElementById('vo').onchange=function(){if(this.checked&&playing)speak(cur);else try{synth&&synth.cancel()}catch(e){}};
+try{synth&&synth.getVoices()}catch(e){}
+setScene(0,false);
+})();
+</script>
+</body>
+</html>
